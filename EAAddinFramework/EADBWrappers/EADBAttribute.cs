@@ -386,8 +386,8 @@ namespace TSF.UmlToolingFramework.Wrappers.EA
         public Collection TaggedValues => this.eaAttribute.TaggedValues;
         public Collection TaggedValuesEx => this.eaAttribute.TaggedValuesEx;
         public string FQStereotype => this.eaAttribute.FQStereotype;
- 
-        public TypeInfoProperties TypeInfoProperties => this.eaAttribute.TypeInfoProperties;
+
+        public ITypeInfoProperties TypeInfoProperties => this.eaAttribute.TypeInfoProperties;
 
 
         public string GetLastError()

@@ -215,14 +215,6 @@
       <Project>{69f3dc26-99b2-461c-8d4f-8d47702fa90c}</Project>
       <Name>SAP2EAImporter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\UML-Tooling-Framework\UMLToolingFramework\UMLToolingFramework.csproj">
-      <Project>{0FC55607-C9D0-442D-941C-F23AD00CB318}</Project>
-      <Name>UMLToolingFramework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EAAddinFramework\EAAddinFramework.csproj">
-      <Project>{4161DD26-375F-4744-BA96-B70366E19A78}</Project>
-      <Name>EAAddinFramework</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyAddin\MyAddin.csproj">
       <Project>{E7CDD133-70A7-4E27-8E47-EE200655A1EA}</Project>
       <Name>MyAddin</Name>

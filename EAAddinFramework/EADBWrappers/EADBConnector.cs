@@ -394,11 +394,11 @@ namespace TSF.UmlToolingFramework.Wrappers.EA
         {
             this.eaConnector.SetTXNote(txCode, translation);
         }
-
-        public bool SetFeatureLink(EnumFeatureLinkType startType, string guidStart, EnumFeatureLinkType endType, string guidEnd)
-        {
-            throw new NotImplementedException();
-        }
+        //todo: resolve the enums from EA Interop
+        //public bool SetFeatureLink(EnumFeatureLinkType startType, string guidStart, EnumFeatureLinkType endType, string guidEnd)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         private EADBConnectorEnd _clientEnd = null;
         public EADBConnectorEnd ClientEnd
@@ -457,8 +457,8 @@ namespace TSF.UmlToolingFramework.Wrappers.EA
         }
         public int Width
         {
-            get => this.eaConnector.Width;
-            set => this.eaConnector.Width = value;
+            get => this.eaConnector.width;
+            set => this.eaConnector.width = value;
         }
         public Collection CustomProperties => this.eaConnector.CustomProperties;
         private bool? _isDerived;
@@ -528,7 +528,7 @@ namespace TSF.UmlToolingFramework.Wrappers.EA
 
         public global::EA.Element AssociationClass => this.eaConnector.AssociationClass;
 
-        public TypeInfoProperties TypeInfoProperties => this.eaConnector.TypeInfoProperties;
+        public ITypeInfoProperties TypeInfoProperties => this.eaConnector.TypeInfoProperties;
 
         public ObjectType ObjectType => global::EA.ObjectType.otConnector;
 

@@ -549,9 +549,10 @@ namespace TSF.UmlToolingFramework.Wrappers.EA
 
         public string FQName => this.eaElement.FQName;
 
-        public TypeInfoProperties TypeInfoProperties => this.eaElement.TypeInfoProperties;
+        public ITypeInfoProperties TypeInfoProperties => this.eaElement.TypeInfoProperties;
 
-        public Collection FeatureLinks => this.eaElement.FeatureLinks;
+        //todo: implement FeatureLinks when EA implements it
+        //public Collection FeatureLinks => this.eaElement.FeatureLinks;
         public string GetLastError()
         {
             return this.eaElement.GetLastError();

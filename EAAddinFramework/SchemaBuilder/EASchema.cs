@@ -1335,23 +1335,23 @@ When renaming redefines in the schema, please rename only one at a time.");
                 }
                 bool updateTaggedValue = true;
                 var targetTaggedValue = this.popTargetTaggedValue(targetTaggedValues, sourceTaggedValue);
-                var ignoredTaggedValue = this.settings.ignoredTaggedValues.FirstOrDefault(x => x.name.Equals(sourceTaggedValue.name, StringComparison.InvariantCultureIgnoreCase));
+                var ignoredTaggedValue = this.settings.ignoredTaggedValues.FirstOrDefault(x => x.Equals(sourceTaggedValue.name, StringComparison.InvariantCultureIgnoreCase));
                 if (ignoredTaggedValue != null)
                 {
-                    if (ignoredTaggedValue.dontCopy)
-                    {
-                        //if the tagged value is in the list of ignored tagged values with dontCopy = true, then we don't update it at all
+                    //if (ignoredTaggedValue.dontCopy)
+                    //{
+                    //    //if the tagged value is in the list of ignored tagged values with dontCopy = true, then we don't update it at all
                         updateTaggedValue = false;
-                    }
-                    else
-                    {
-                        if (targetTaggedValue != null &&
-                            targetTaggedValue.eaStringValue != ignoredTaggedValue.defaultValue)
-                        {
-                            //don't update any of the tagged values of the ignoredTaggeValues if the value is filled in with anything else then the default value.
-                            updateTaggedValue = false;
-                        }
-                    }
+                    //}
+                    //else
+                    //{
+                    //    if (targetTaggedValue != null &&
+                    //        targetTaggedValue.eaStringValue != ignoredTaggedValue.defaultValue)
+                    //    {
+                    //        //don't update any of the tagged values of the ignoredTaggeValues if the value is filled in with anything else then the default value.
+                    //        updateTaggedValue = false;
+                    //    }
+                    //}
                 }
                 //don't update custom position of the value is already filled in.
                 if (sourceTaggedValue.name.Equals(this.settings.customPositionTag, StringComparison.InvariantCultureIgnoreCase)
