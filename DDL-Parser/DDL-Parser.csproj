@@ -4,6 +4,8 @@
     <!--<Platform Condition=" '$(Platform)' == '' ">x86</Platform>-->
     <OutputType>Library</OutputType>
     <RootNamespace>DDL_Parser</RootNamespace>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <IsPackable>true</IsPackable>
   </PropertyGroup>
   <ItemGroup>
     <!--<Reference Update="System.Core">

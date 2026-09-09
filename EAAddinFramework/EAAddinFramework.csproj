@@ -2,8 +2,8 @@
 	<PropertyGroup>
 		<TargetFramework>net4.8</TargetFramework>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 		<IsPackable>true</IsPackable>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 		<OutputType>Library</OutputType>
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 		<UseWindowsForms>true</UseWindowsForms>
@@ -16,6 +16,10 @@ regsvr32 "$(TargetDir)Files\tsc64.dll" /s</PostBuildEvent>-->
 			<EmbedInteropTypes>False</EmbedInteropTypes>
 		</Reference>
 		<PackageReference Include="CsvHelper" Version="7.1.1" />
+		<PackageReference Include="GitVersion.MsBuild" Version="6.8.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="KryptonWinFormControls" Version="4.4.1.0" />
 		<PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.7" />
 		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
@@ -34,7 +38,6 @@ regsvr32 "$(TargetDir)Files\tsc64.dll" /s</PostBuildEvent>-->
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.17" />
 		<PackageReference Include="System.Memory" Version="4.5.4" />
 		<PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
-		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
 		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
 	</ItemGroup>
 	<ItemGroup>
